@@ -39,4 +39,41 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img"]);
+logo.src = "img/logo.png";
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img"]);
+ctaImage.src = "img/header-img.png"
+
+let midImage = document.getElementById("middle-img");
+midImage.setAttribute('src', siteContent["main-content"]["img"]);
+midImage.src = "img/mid-page-accent.jpg";
+
+//text
+
+const h1 = document.querySelector('.cta-text h1');
+h1.textContent = siteContent.cta.h1;
+
+const button = document.querySelector('.cta .cta-text button');
+button.textContent = siteContent.cta.button;
+
+// const featH4 = document.querySelector('.text-content h4');
+// featH4.textContent = siteContent["main-content"]["top-content"]["text-content"].h4;
+const featuresCont = document.querySelector('.top-content .text-content p');
+featuresCont.textContent = siteContent["main-content"]["features-content"];
+
+const aboutCont = document.querySelector('.top-content .text-content p');
+aboutCont.textContent = siteContent["main-content"]["features-content"];
+
+// nav bar
+
+const navItems = document.querySelectorAll('nav a');
+for (let i = 1; i<= navItems.length; i++) {
+  navItems[i].textContent = siteContent.nav[`nav-item-${i}`];
+};
+
+// const h4 = document.querySelectorAll('h4');
+// for (let i = 0; i<= h4.length; i++) {
+//   h4[i].textContent = siteContent.h4[`${i}`];
+// };
